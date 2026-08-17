@@ -1,7 +1,7 @@
 <?php
 
-require_once '../src/HeartRateCalculator.php';
-require_once '../src/KarvonenCalculator.php';
+require_once '../src/CalculaFrecCard.php';
+require_once '../src/CalculaKarvonen.php';
 
 $result = null;
 
@@ -10,11 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $age = (int)($_POST['age'] ?? 0);
     $resting = (int)($_POST['resting'] ?? 0);
 
-    $fcm = HeartRateCalculator::calculateTanaka($age);
+    $fcm = CalculaFrecCard::calculateTanaka($age);
 
     $result = [
         'fcm' => $fcm,
-        'zones' => KarvonenCalculator::calculateZones(
+        'zones' => CalculaKarvonen::calculateZones(
             $fcm,
             $resting
         )
