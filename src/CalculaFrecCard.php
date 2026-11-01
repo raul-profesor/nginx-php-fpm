@@ -1,6 +1,6 @@
 <?php
 
-class HeartRateCalculator
+class CalculaFrecCard
 {
     public static function calculateFCM(int $age): int
     {

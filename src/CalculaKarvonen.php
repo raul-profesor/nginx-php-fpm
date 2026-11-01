@@ -1,6 +1,6 @@
 <?php
 
-class KarvonenCalculator
+class CalculaKarvonen
 {
     public static function calculateZones(
         int $fcm,
